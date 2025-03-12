@@ -1,0 +1,175 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+*, *::after, *::before {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    height: 100%;
+    background: rgb(2,0,36);
+    background: linear-gradient(180deg, rgba(2,0,36,1) 0%, rgba(0,0,0,1) 0%, rgba(3,13,38,0.5326505602240896) 100%, rgba(0,168,221,0.4514180672268907) 0%, rgba(185,0,201,0) 100%, rgba(237,39,39,1) 0%, rgba(3,13,38,0.5326505602240896) 100%);
+    padding: 7rem 0;
+}
+
+h1 {
+    font-size: 55px;
+    font-weight: 900;
+    color: #fff;
+}
+
+h2 {
+    font-size: 53px;
+    font-weight: 900;
+    color: #fff;
+}
+
+h3 {
+    font-size: 28px;
+    font-weight: 700;
+    color: #fff;
+}
+
+h4 {
+    font-weight: 300;
+    color: #fff;
+}
+
+h5 {
+    font-size: 14px;
+    font-weight: 400;
+    color: #000;
+}
+
+p {
+    font-weight: 400;
+    color: #fff;
+}
+
+span {
+    font-size: 35px;
+    font-weight: 300;
+    color: #fff;
+}
+
+.container {
+    width: 75rem;
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+}
+
+.header {
+    padding: 0 7rem;
+    position: absolute;
+    z-index: 2;
+    top: 12rem;
+    width: 75rem;
+}
+
+.header__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.header__navigation {
+    display: flex;
+    column-gap: 1.5rem;
+    align-items: center;
+}
+
+.header__navigation--list {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.header__navigation--item > a {
+    color: #fff;
+    font-size: 1.4rem;
+    font-weight: 400;
+}
+
+.header__button {
+    display: flex;
+    column-gap: 1.5rem;
+}
+
+.header__button--order {
+    background: rgb(237,39,39);
+    background: linear-gradient(90deg, rgba(237,39,39,1) 0%, rgba(255,139,74,1) 100%);
+    color: #fff;
+    font-size: 20px;
+    font-weight: 400;
+    box-shadow: 0px 0px 15px 1px rgba(255,139,74,1);
+    padding: .5rem 1.2rem;
+    border-radius: 1.2rem;
+}
+
+.header__button--luxary {
+    background: rgb(40,17,17);
+    background: linear-gradient(90deg, rgba(40,17,17,1) 0%, rgba(87,51,30,1) 100%);
+    padding: .5rem 1.5rem;
+    border-radius: 1.3rem;
+    box-shadow: 0px 0px 15px 1px rgba(198,142,0,1);
+}
+
+.header__button--luxary--text {
+    background: rgb(255,200,60);
+    background: linear-gradient(0deg, rgba(255,200,60,1) 0%, rgba(198,142,0,1) 76%, rgba(255,255,255,1) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 20px;
+    font-weight: 400;
+    text-transform: uppercase;
+}
+
+.cover {
+    background: rgba(255, 255, 255, 0.4);
+    backdrop-filter: blur(3rem);
+    position: relative;
+    padding: 15rem 5rem 5rem 5rem;
+    border-radius: 2.5rem;
+    height: 41.6rem;
+}
+
+body::after {
+    content: '';
+    width: 315px;
+    height: 315px;
+    background: rgb(255,200,60);
+    background: linear-gradient(180deg, rgba(255,200,60,1) 0%, rgba(236,70,39,1) 100%, rgba(255,255,255,1) 100%);
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    z-index: -3;
+    top: 20rem;
+    left: 17rem;
+}
+
+body::before {
+    content: '';
+    width: 315px;
+    height: 315px;
+    background: #00000000;
+    border-radius: 50%;
+    display: block;
+    position: absolute;
+    z-index: -2;
+    top: 20rem;
+    left: 15rem;
+    backdrop-filter: blur(10px);
+}
+
+.cover__text {
+    
+}
+
