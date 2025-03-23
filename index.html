@@ -15,6 +15,7 @@
     <title>Цветочный магазин "Мой сад" | Ростов-на-Дону</title>
 </head>
 <body>
+    <div class="window"></div>
     <div class="container">
         <header class="header">
             <div class="header__container">
@@ -22,28 +23,35 @@
                 <nav class="header__navigation">
                     <ul class="header__navigation--list">
                         <li class="header__navigation--item">
-                            <a href="" class="header__navigation--link">Отзывы</a>
+                            <a href="#reviews" class="header__navigation--link">Отзывы</a>
                         </li>
                         <li class="header__navigation--item">
-                            <a href="" class="header__navigation--link">Цветы</a>
+                            <a href="#flowers" class="header__navigation--link">Цветы</a>
                         </li>
                         <li class="header__navigation--item">
-                            <a href="" class="header__navigation--link">Портфолио</a>
+                            <a href="#delivery" class="header__navigation--link">Доставка</a>
                         </li>
                         <li class="header__navigation--item">
-                            <a href="" class="header__navigation--link">Контакты</a>
+                            <a href="#contacts" class="header__navigation--link">Контакты</a>
                         </li>
                     </ul>
                     <div class="header__button">
                         <button class="header__button--order">Заказать</button>
                         <button class="header__button--luxary">
-                            <span class="header__button--luxary--text">Luxary</span>
+                            <a href="#luxary" class="header__button--luxary--text">Luxary</a>
                         </button>
                     </div>
                 </nav>
             </div>
         </header>
         <main class="main">
+            <div class="block1"></div>
+            <div class="block2"></div>
+            <div class="block3"></div>
+            <div class="block4"></div>
+            <div class="block5"></div>
+            <div class="block6"></div>
+            <div class="block7"></div>
             <div class="main__container">
                 <section class="cover">
                     <div class="cover__text">
@@ -51,40 +59,423 @@
                         <span class="cover__text--second">"Мой сад" - Современный дизайн, аромат и красота цветов. Подойдут для любого итерьера и праздника</span>
                     </div>
                     <div class="cover__button">
-                        <a href="" class="cover__button--ready">Выбрать готовый букет</a>
+                        <a href="#flowers" class="cover__button--ready">Выбрать готовый букет</a>
                         <button class="cover__button--constructor">Собрать самостоятельно в конструкторе</button>
                     </div>
                     <div class="cover__background">
-                        <div class="cover__background--block">
-                            <img src="./images/blue_laguna.png" alt="blue" class="cover__background--image">
+                        <div class="cover__background--first">
+                            <div class="cover__background--block">
+                                <img src="./images/blue_laguna.png" alt="blue" class="cover__background--image">
+                            </div>
+                            <div class="cover__background--block">
+                                <img src="./images/cherry.png" alt="" class="cover__background--image">
+                            </div>
                         </div>
-                        <div class="cover__background--block">
-                            <img src="./images/cherry.png" alt="" class="cover__background--image">
+                        <div class="cover__background--second">
+                            <div class="cover__background--block">
+                                <img src="./images/chocolate.png" alt="" class="cover__background--image">
+                            </div>
+                            <div class="cover__background--block">
+                                <span class="cover__background--comment">😍 Красотааа!</span>
+                            </div>
+                            <div class="cover__background--block">
+                                <img src="./images/fiolet.png" alt="" class="cover__background--image">
+                            </div>
                         </div>
-                        <div class="cover__background--block">
-                            <img src="./images/chocolate.png" alt="" class="cover__background--image">
+                        <div class="cover__background--three">
+                            <div class="cover__background--block">
+                                <img src="./images/no_chocolate.png" alt="" class="cover__background--image">
+                            </div>
+                            <div class="cover__background--block">
+                                <img src="./images/pink.png" alt="" class="cover__background--image">
+                            </div>
                         </div>
-                        <div class="cover__background--block">
-                            <span class="cover__background--comment">Красотааа!</span>
+                    </div>
+                </section>
+                <section class="made">
+                    <h2 class="made__title">Из чего состоит букет?</h2>
+                    <div class="made__container">
+                        <div class="made__image">
+                            <img src="./images/made__flower.png" alt="" class="made__image--picture">
                         </div>
-                        <div class="cover__background--block">
-                            <img src="./images/fiolet.png" alt="" class="cover__background--image">
+                        <div class="made__description">
+                            <div class="made__rose made__description--block">
+                                <h2 class="made__rose--title made__block--title">Не банальные розы</h2>
+                                <p class="made__rose--description made__block--description">На ваш выбор мы соберем букет из 13, 21 или 51 розы, пропитанные цветочным экстрактом</p>
+                            </div>
+                            <div class="made__box made__description--block">
+                                <h2 class="made__box--title made__block--title">Крафт-бокс</h2>
+                                <p class="made__box--description made__block--description">Эксклюзивные боксы разработанные по нашим стандартам. На Ваш выбор десятки разнообразных цветовых решений</p>
+                            </div>
+                            <div class="made__brand made__description--block">
+                                <h2 class="made__brand--title made__block--title">Брендирование</h2>
+                                <p class="made__brand--description made__block--description">Золотое* тиснение логотипа — как украшение завершенной композиции</p>
+                            </div>
                         </div>
-                        <div class="cover__background--block">
-                            <img src="./images/no_chocolate.png" alt="" class="cover__background--image">
+                    </div>
+                </section>
+                <section class="pay" id="delivery">
+                    <h2 class="pay__title">Оплата и доставка</h2>
+                    <div class="pay__container">
+                        <div class="pay__card">
+                            <div class="pay__card--background">
+                                <img src="./images/sber__logo.svg" alt="" class="pay__card--sber">
+                                <img src="./images/chip__card.svg" alt="" class="pay__card--chip">
+                                <img src="./images/wifi.png" alt="" class="pay__card--wifi">
+                                <span class="pay__card--number">1234 5678 9101 1123</span>
+                                <p class="pay__card--name">Ivan Ivanov</p>
+                                <span class="pay__card--text">VALID THRU</span>
+                                <span class="pay__card--data">03/24</span>
+                            </div>
                         </div>
-                        <div class="cover__background--block">
-                            <img src="./images/pink.png" alt="" class="cover__background--image">
+                        <div class="pay__text">
+                            <div class="pay__rostov">
+                                <h3 class="pay__rostov--title">Доставка по Ростову-на-Дону:</h3>
+                                <ul class="pay__rostov--description">
+                                    <li class="pay__rostov--description--item">Самовывоз — Бесплатно</li>
+                                    <li class="pay__rostov--description--item">+200₽ — доставка по городу</li>
+                                    <li class="pay__rostov--description--item">+100₽ — доставка к назначенному времени (±10мин)</li>
+                                    <li class="pay__rostov--description--item">+100₽ — за срочность (в течение часа после заказа)</li>
+                                    <li class="pay__rostov--description--item">+200₽ — за пределами города (до 10км)</li>
+                                </ul>
+                            </div>
+                            <div class="pay__russia">
+                                <h3 class="pay__russia--title">Доставка по России и СНГ:</h3>
+                                <p class="pay__russia--description">Доставка в другие регионы России или в СНГ осуществляется крупнейшими маркетплэйсами России. Заказ необходимо оформить в нашем магазине на маркетплэйсах <a href="">Wildberries</a>, <a href="">Яндекс.Маркет</a> или <a href="">OZON</a></p>
+                            </div>
+                            <div class="pay__payment">
+                                <h3 class="pay__payment--title">Оплата при доставке по Ростову-на-Дону:</h3>
+                                <p class="pay__payment--description">Оплата букетов и доставки осуществляется курьеру после получения. В случае если получатель отличается от заказчика, оплату необходимо произвести заранее в полном объеме на карту Сбер Реквезиты для оплаты вышлет оператор после оформления заказа</p>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section class="collect" id="flowers">
+                    <div class="collect__container">
+                        <h2 class="collect__title">Какой букет нам собрать для Вас?</h2>
+                        <div class="collect__block">
+                            <ul class="collect__elegance--list">
+                                <li class="collect__elegance--item">
+                                    <div class="elegance__item--image">
+                                        <img src="./images/elegance_1.png" alt="" class="elegance__item--image--picture">
+                                    </div>
+                                    <div class="elegance__item--data">
+                                        <span class="elegance__item--data--price">1290₽</span>
+                                        <p class="elegance__item--data--description">Весенний</p>
+                                    </div>
+                                </li>
+                                <li class="collect__elegance--item">
+                                    <div class="elegance__item--image">
+                                        <img src="./images/elegance_2.png" alt="" class="elegance__item--image--picture">
+                                    </div>
+                                    <div class="elegance__item--data">
+                                        <span class="elegance__item--data--price">1690₽</span>
+                                        <p class="elegance__item--data--description">Нежный розвовй</p>
+                                    </div>
+                                </li>
+                                <li class="collect__elegance--item">
+                                    <div class="elegance__item--image">
+                                        <img src="./images/elegance_3.png" alt="" class="elegance__item--image--picture">
+                                    </div>
+                                    <div class="elegance__item--data">
+                                        <span class="elegance__item--data--price">1690₽</span>
+                                        <p class="elegance__item--data--description">Голубая луна</p>
+                                    </div>
+                                </li>
+                                <li class="collect__elegance--item">
+                                    <div class="elegance__item--image">
+                                        <img src="./images/elegance_4.png" alt="" class="elegance__item--image--picture">
+                                    </div>
+                                    <div class="elegance__item--data">
+                                        <span class="elegance__item--data--price">1690₽</span>
+                                        <p class="elegance__item--data--description">Фиолетовый</p>
+                                    </div>
+                                </li>
+                                <li class="collect__elegance--item">
+                                    <div class="elegance__item--image">
+                                        <img src="./images/elegance_5.png" alt="" class="elegance__item--image--picture">
+                                    </div>
+                                    <div class="elegance__item--data">
+                                        <span class="elegance__item--data--price">1690₽</span>
+                                        <p class="elegance__item--data--description">Голубой</p>
+                                    </div>
+                                </li>
+                                <li class="collect__elegance--item collect__elegance--name">
+                                   <p class="elegance__name--title">Букеты из ленейки</p>
+                                   <span class="elegance__name--name">elegance</span>
+                                </li>
+                            </ul>
+                            <ul class="collect__colorist--list">
+                                <li class="collect__colorist--item collect__colorist--name">
+                                    <p class="colorist__name--title">Букеты из ленейки</p>
+                                    <span class="colorist__name--name">colorist</span>
+                                </li>
+                                <li class="collect__colorist--item">
+                                    <div class="colorist__item--image">
+                                        <img src="./images/colorist_1.png" alt="" class="colorist__item--image--picture">
+                                    </div>
+                                    <div class="colorist__item--data">
+                                        <span class="colorist__item--data--price">1690₽</span>
+                                        <p class="colorist__item--data--description">Синий</p>
+                                    </div>
+                                </li>
+                                <li class="collect__colorist--item">
+                                    <div class="colorist__item--image">
+                                        <img src="./images/colorist_2.png" alt="" class="colorist__item--image--picture">
+                                    </div>
+                                    <div class="colorist__item--data">
+                                        <span class="colorist__item--data--price">1290₽</span>
+                                        <p class="colorist__item--data--description">Розовый яд</p>
+                                    </div>
+                                </li>
+                                <li class="collect__colorist--item">
+                                    <div class="colorist__item--image">
+                                        <img src="./images/colorist_3.png" alt="" class="colorist__item--image--picture">
+                                    </div>
+                                    <div class="colorist__item--data">
+                                        <span class="colorist__item--data--price">1690₽</span>
+                                        <p class="colorist__item--data--description">Осенний</p>
+                                    </div>
+                                </li>
+                                <li class="collect__colorist--item">
+                                    <div class="colorist__item--image">
+                                        <img src="./images/colorist_4.png" alt="" class="colorist__item--image--picture">
+                                    </div>
+                                    <div class="colorist__item--data">
+                                        <span class="colorist__item--data--price">1690₽</span>
+                                        <p class="colorist__item--data--description">Шоколад</p>
+                                    </div>
+                                </li>
+                                <li class="collect__colorist--item">
+                                    <div class="colorist__item--image">
+                                        <img src="./images/colorist_5.png" alt="" class="colorist__item--image--picture">
+                                    </div>
+                                    <div class="colorist__item--data">
+                                        <span class="colorist__item--data--price">1690₽</span>
+                                        <p class="colorist__item--data--description">Вишня</p>
+                                    </div>
+                                </li>
+                            </ul>
+                            <ul class="collect__natural--list">
+                                <li class="collect__natural--item">
+                                    <div class="natural__item--image">
+                                        <img src="./images/natural_1.png" alt="" class="natural__item--image--pucture">
+                                    </div>
+                                    <div class="natural__item--data">
+                                        <span class="natural__item--data--price">1690₽</span>
+                                        <p class="natural__item--data--description">Не шоколад</p>
+                                    </div>
+                                </li>
+                                <li class="collect__natural--item">
+                                    <div class="natural__item--image">
+                                        <img src="./images/natural_2.png" alt="" class="natural__item--image--pucture">
+                                    </div>
+                                    <div class="natural__item--data">
+                                        <span class="natural__item--data--price">1690₽</span>
+                                        <p class="natural__item--data--description">Фиолетовый сад</p>
+                                    </div>
+                                </li>
+                                <li class="collect__natural--item">
+                                    <div class="natural__item--image">
+                                        <img src="./images/natural_3.png" alt="" class="natural__item--image--pucture">
+                                    </div>
+                                    <div class="natural__item--data">
+                                        <span class="natural__item--data--price">1690₽</span>
+                                        <p class="natural__item--data--description">Розовая пастэль</p>
+                                    </div>
+                                </li>
+                                <li class="collect__natural--item">
+                                    <div class="natural__item--image">
+                                        <img src="./images/natural_4.png" alt="" class="natural__item--image--pucture">
+                                    </div>
+                                    <div class="natural__item--data">
+                                        <span class="natural__item--data--price">1290₽</span>
+                                        <p class="natural__item--data--description">Фисташка</p>
+                                    </div>
+                                </li>
+                                <li class="collect__natural--item">
+                                    <div class="natural__item--image">
+                                        <img src="./images/natural_5.png" alt="" class="natural__item--image--pucture">
+                                    </div>
+                                    <div class="natural__item--data">
+                                        <span class="natural__item--data--price">1690₽</span>
+                                        <p class="natural__item--data--description">Бирюза желтая</p>
+                                    </div>
+                                </li>
+                                <li class="collect__natural--item collect__natural--name">
+                                    <p class="natural__name--title">Букеты из ленейки</p>
+                                    <span class="natural__name--name">natural</span>
+                                </li>
+                            </ul>
+                            <ul class="collect__luxary--list" id="luxary">
+                                <li class="collect__luxary--item collect__luxary--name">
+                                    <p class="luxary__name--title">Только для избранных</p>
+                                    <span class="luxary__name--name">luxary</span>
+                                </li>
+                                <li class="collect__luxary--item">
+                                    <div class="luxary__item--image">
+                                        <img src="./images/lux_1.png" alt="" class="luxary__item--image--picture">
+                                    </div>
+                                    <div class="luxary__item--data">
+                                        <span class="luxary__item--data--price">2300₽</span>
+                                        <p class="luxary__item--data--description">Дикая вишня</p>
+                                    </div>
+                                </li>
+                                <li class="collect__luxary--item">
+                                    <div class="luxary__item--image">
+                                        <img src="./images/lux_2.png" alt="" class="luxary__item--image--picture">
+                                    </div>
+                                    <div class="luxary__item--data">
+                                        <span class="luxary__item--data--price">2990₽</span>
+                                        <p class="luxary__item--data--description">AMG</p>
+                                    </div>
+                                </li>
+                                <li class="collect__luxary--item">
+                                    <div class="luxary__item--image">
+                                        <img src="./images/lux_3.png" alt="" class="luxary__item--image--picture">
+                                    </div>
+                                    <div class="luxary__item--data">
+                                        <span class="luxary__item--data--price">2990₽</span>
+                                        <p class="luxary__item--data--description">Дикая голубая луна</p>
+                                    </div>
+                                </li>
+                                <li class="collect__luxary--item">
+                                    <div class="luxary__item--image">
+                                        <img src="./images/lux_4.png" alt="" class="luxary__item--image--picture">
+                                    </div>
+                                    <div class="luxary__item--data">
+                                        <span class="luxary__item--data--price">2990₽</span>
+                                        <p class="luxary__item--data--description">Девственица</p>
+                                    </div>
+                                </li>
+                                <li class="collect__luxary--item">
+                                    <div class="luxary__item--image">
+                                        <img src="./images/lux_5.png" alt="" class="luxary__item--image--picture">
+                                    </div>
+                                    <div class="luxary__item--data">
+                                        <span class="luxary__item--data--price">2990₽</span>
+                                        <p class="luxary__item--data--description">Дикая красная луна</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </section>
+                <section class="reviews" id="reviews">
+                    <article class="testimonial__content">
+                        <div class="testimpnial__content--head">
+                            <span>Отзывы о нашей работе</span>
+                            <h3>Что говорят о нас в сети</h3>
+                        </div>
+                        <div class="testimonial__carousel">
+                            <div class="testimonial__content--arrows">
+                                <button type="button" class="prev__slide">
+                                    <img src="./images/reviews__arrow.svg" alt="arrow" class="slider__arrow--prev">
+                                </button>
+                                <button type="button" class="next__slide">
+                                    <img src="./images/reviews__arrow.svg" alt="arrow" class="slider__arrow--next">
+                                </button>
+                            </div>
+                            <div class="carousel__list">
+                                <div class="carousel__track">
+                                    <div class="carousel__track--item">
+                                        <div class="carousel__item--image">
+                                            <img src="./images/person_reviews1.jpg" alt="" class="carousel__item--image--picture">
+                                            <p class="carousel__item--image--name">Анастасия В.</p>
+                                        </div>
+                                        <div class="carousel__item--text">
+                                            <h3 class="carousel__item--text--title">Букет: Дикая вишня</h3>
+                                            <p class="carousel__item--text--description">Прекрасный выбор букетов и аксессуаров. Очень вежливые и компетентные сотрудники. 5 баллов!</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel__track--item">
+                                        <div class="carousel__item--image">
+                                            <img src="./images/person_reviews2.jpg" alt="" class="carousel__item--image--picture">
+                                            <p class="carousel__item--image--name">Светлана М.</p>
+                                        </div>
+                                        <div class="carousel__item--text">
+                                            <h3 class="carousel__item--text--title">Букет: Бирюза желтая</h3>
+                                            <p class="carousel__item--text--description">Девочки работают оперативно, лишнее не задвигают, учитывают все предпочтения клиента, имея при этом безупречный вкус и выдержку 😂💪🏻 Композиции на любой случай и повод, да и готовые букеты в магазине есть всегда! Удобное расположение магазина в центре. В общем, только сюда! Спасибо🥳</p>
+                                        </div>
+                                    </div>
+                                    <div class="carousel__track--item">
+                                        <div class="carousel__item--image">
+                                            <img src="./images/person_reviews3.jpg" alt="" class="carousel__item--image--picture">
+                                            <p class="carousel__item--image--name">Виктория Н.</p>
+                                        </div>
+                                        <div class="carousel__item--text">
+                                            <h3 class="carousel__item--text--title">Букет: Голубой</h3>
+                                            <p class="carousel__item--text--description">С момента заказа до момента доставки - ровно полтора часа! Букетики очень стильные, цены отличные коммуникабельность на высоте. Очень приятно работать с Вами. С уважением, коллеги и заказчики из Москвы</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </section>
+                <section class="contacts" id="contacts">
+                    <h2 class="contacts__title" id="contacts">Контактная информация</h2>
+                    <div class="contacts__container">
+                        <iframe src="https://yandex.ru/map-widget/v1/?um=constructor%3Aa852d05654a8de68072b6590e1c520435195718bb0a07dc9a708a0addb359724&amp;source=constructor" width="100%" height="451" frameborder="0"></iframe>
+                        <div class="contacts__info">
+                            <p class="contacts__info--number">Номер телефона: <a href="tel:89999999999">+7 (999) 999-99-99</a></p>
+                            <span>Работаем каждый день с 10:00 до 20:00 по всему городу</span>
+                            <p class="contacts__info--tech">Техническая поддержка: <a href="tel:89999999999">+7 (999) 999-99-99</a></p>
                         </div>
                     </div>
                 </section>
             </div>
         </main>
-        <footer class="footer">
-            <div class="footer__container">
-            </div>
-        </footer>
     </div>
+    <footer class="footer">
+        <div class="footer__container">
+            <div class="footer__image">
+                <img src="./images/logo.png" alt="" class="footer__image--logo">
+            </div>
+            <div class="footer__second">
+                <ul class="footer__navigation">
+                    <div class="footer__navigation--first">
+                        <li class="footer__navigation--item">
+                            <a href="" class="footer__navigarion--item--link">Доставка</a>
+                        </li>
+                        <li class="footer__navigation--item">
+                            <a href="" class="footer__navigarion--item--link">Оплата</a>
+                        </li>
+                        <li class="footer__navigation--item">
+                            <a href="" class="footer__navigarion--item--link">Заказать</a>
+                        </li>
+                    </div>
+                    <div class="footer__navigation--second">
+                        <li class="footer__navigation--item">
+                            <a href="" class="footer__navigarion--item--link">Telegram</a>
+                        </li>
+                        <li class="footer__navigation--item">
+                            <a href="" class="footer__navigarion--item--link">Отзывы</a>
+                        </li>
+                        <li class="footer__navigation--item">
+                            <a href="" class="footer__navigarion--item--link">Instagram</a>
+                        </li>
+                    </div>
+                </ul>
+                <div class="footer__second--text">
+                    <p class="second__text--rostov">Сделано с ♥ в Ростове-на-Дону</p>
+                    <p class="second__text--info">© 2021 «Мой сад» ОГРН 1147746136713 ИНН 7731465565 ИП Иванов С.А.</p>
+                </div>
+            </div>
+            <div class="footer__info">
+                <div class="footer__info--first">
+                    <h4 class="footer__info--first--title">ГРАФИК РАБОТЫ</h4>
+                    <p class="footer__info--first--description">Контакт-центр — с 08:00 до 22:00 без выходных. Оформление заявок на сайте и их исполнение происходит круглосуточно.</p>
+                </div>
+                <div class="footer__info--second">
+                    <h4 class="footer__info--second--title">КОНТАКТЫ</h4>
+                    <p class="footer__info--second--description">350000, город Ростов-на-Дону Номер контактного центра +7 (999) 999-99-99</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-2.2.4.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.maskedinput/1.4.1/jquery.maskedinput.min.js"></script>
     <script src="./main.js"></script>
 </body>
 </html>
