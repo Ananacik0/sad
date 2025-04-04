@@ -529,7 +529,7 @@ body::before {
     align-items: center;
 }
 
-.collect__elegance--item, .collect__colorist--item, .collect__natural--item, .collect__luxary--item {
+.collect__elegance--item, .collect__colorist--item, .collect__natural--item, .collect__luxary--item, .flowers__item {
     display: flex;
     flex-direction: column;
     
@@ -550,7 +550,7 @@ body::before {
     }
 }
 
-.elegance__item--image, .colorist__item--image, .natural__item--image, .luxary__item--image {
+.elegance__item--image, .colorist__item--image, .natural__item--image, .luxary__item--image, .flowers__item--image {
     overflow: hidden;
     border-radius: 1rem;
     background: #ffffff;
@@ -1043,4 +1043,148 @@ body::before {
     display: block;
     padding: 1rem 1.5rem;
     border-radius: .7rem;
+}
+
+.flowers {
+    background: linear-gradient(135deg, #250029b9, #10efff56);
+    width: 75rem;
+    height: 50rem;
+    padding: 2rem;
+    border-radius: 1rem;
+    position: relative;
+}
+
+.flowers__content {
+    height: 38rem;
+    overflow: hidden;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;  
+    justify-content: center;  
+}
+
+.flowers__content--list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    overflow-x: hidden;
+    height: 35rem;
+    align-items: center;
+    padding: 1rem;
+}
+
+.flowers__item {
+    display: flex;
+    flex-direction: column;
+    
+    div > span {
+        display: block;
+        font-size: 14px;
+        font-weight: 500;
+        color: #000;
+        background: #ffffff;
+        width: fit-content;
+        padding: 3px 9px;
+        border-radius: 1rem;
+        margin: 5px 0 2px 0;        
+    }
+
+    div > p {
+        font-weight: 300;
+    }
+}
+
+.close__window {
+    background: #00000060;
+    width: 3rem;
+    height: 3rem;
+    position: absolute;
+    border: 1px solid #000;
+    border-radius: .4rem;
+    top: 1rem;
+    right: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    transition: .3s;
+}
+
+.close__window::after {
+    content: '';
+    width: 2px;
+    height: 2rem;
+    background: #000;
+    position: absolute;
+    transition: .3s;
+}
+
+.close__window::before {
+    content: '';
+    width: 2px;
+    height: 2rem;
+    background: #000;
+    position: absolute;
+    transition: .3s;
+}
+
+.close__window:hover {
+    cursor: pointer;
+    box-shadow: 0px 30px 30px 10px #000;
+    border: 1px solid #fff;
+    &&::after {
+        rotate: 45deg;
+        background: #fff;
+    }
+    &&::before {
+        background: #fff;
+        rotate: -45deg;
+    }
+}
+
+/* .colorist__name--title, .elegance__name--title, .luxary__name--title, .natural__name--title, .colorist__name--name */
+
+.collect__luxary--name, .collect__natural--name, .collect__colorist--name, .collect__elegance--name:hover {
+    cursor: pointer;
+}
+
+.flowers__item {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flowers__item--data--luxary {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+    list-style-type: none;
+    font-size: 16px;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-style: normal;
+    font-family: 'Roboto', sans-serif;
+}
+
+.flowers__item--data--price--luxary {
+    
+    background: linear-gradient(90deg, rgba(40,17,17,1) 0%, rgba(87,51,30,1) 100%) !important;
+    color: #FFC83C !important;
+    text-shadow: 0px 1px 10px #C68E00 !important;
+    display: block;
+    font-size: 14px;
+    font-weight: 500;
+    width: fit-content;
+    padding: 3px 9px;
+    border-radius: 1rem;
+    margin: 5px 0 2px 0;
 }

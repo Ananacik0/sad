@@ -204,24 +204,44 @@ const luxSalePrice = 2190;
 let flowersArray = [];
 let basket = [];
 let newWindow = '';
+let imageArray = [
+  ['./images/elegance_1.png', './images/elegance_2.png', './images/elegance_3.png', './images/elegance_4.png', './images/elegance_5.png', './images/colorist_1.png', './images/colorist_2.png', './images/colorist_3.png', './images/colorist_4.png', './images/colorist_5.png', './images/natural_1.png', './images/natural_2.png', './images/natural_3.png', './images/natural_4.png'],
+  ['./images/elegance_1.png', './images/elegance_2.png', './images/elegance_3.png', './images/elegance_4.png', './images/elegance_5.png', './images/colorist_1.png', './images/colorist_2.png', './images/colorist_3.png', './images/colorist_4.png', './images/colorist_5.png', './images/natural_1.png', './images/natural_2.png', './images/natural_3.png', './images/natural_4.png'],
+  ['./images/elegance_1.png', './images/elegance_2.png', './images/elegance_3.png', './images/elegance_4.png', './images/elegance_5.png', './images/colorist_1.png', './images/colorist_2.png', './images/colorist_3.png', './images/colorist_4.png', './images/colorist_5.png', './images/natural_1.png', './images/natural_2.png', './images/natural_3.png', './images/natural_4.png'],
+  ['./images/lux_1.png', './images/lux_2.png', './images/lux_3.png', './images/lux_4.png', './images/lux_5.png', './images/colorist_1.png', './images/colorist_2.png', './images/colorist_3.png', './images/colorist_4.png']
+];
 
-let nameFlowers = [['Весенний', 'Нежный розовый', 'Голубая луна', 'Фиолетовый', 'Голубой', 'Красный', 'Милый мой', 'Светлый персик', 'Белые листья', 'Винный рог', 'Лиловый кокос', 'Бордовая сила', 'Чистый', 'Персик'], ['Синий', 'Розовый яд','Осенний', 'Шоколад', 'Шоколад', 'Вишня', 'Молодой лес', 'Черный хлеб', 'Шелк', 'Мис Мэри', 'Класс А', 'Школьный', 'Горный', 'Большой Лог'], ['Не шоколад', 'Фиолетовый сад', 'Розовая пастэль', 'Фисташка', 'Бирюза желтая', 'Класс Б', 'Космос', 'Ягуана', 'Лондон', 'Москва', 'Синица'], ['Дикая вишня', 'AMG', 'Дикая голубая луна', 'Девственица', 'Дикая красная луна', 'Листья осени', 'Азиатский пион', 'Радужный поцелуй', 'Каменоломня']]
+let nameFlowers = [
+  ['Весенний', 'Нежный розовый', 'Голубая луна', 'Фиолетовый', 'Голубой', 'Красный', 'Милый мой', 'Светлый персик', 'Белые листья', 'Винный рог', 'Лиловый кокос', 'Бордовая сила', 'Чистый', 'Персик'],
+  ['Синий', 'Розовый яд', 'Осенний', 'Шоколад', 'Шоколад Голд', 'Вишня', 'Молодой лес', 'Черный хлеб', 'Шелк', 'Мис Мэри', 'Класс А', 'Школьный', 'Горный', 'Большой Лог'],
+  ['Не шоколад', 'Фиолетовый сад', 'Розовая пастэль', 'Фисташка', 'Бирюза желтая', 'Класс Б', 'Космос', 'Ягуана', 'Лондон', 'Москва', 'Синица'],
+  ['Дикая вишня', 'AMG', 'Дикая голубая луна', 'Девственица', 'Дикая красная луна', 'Листья осени', 'Азиатский пион', 'Радужный поцелуй', 'Каменоломня']
+]
+
+const closeWindow = () => {
+  const btnClose = document.querySelector( '.close__window' );
+  const listenCloseBtn = btnClose.addEventListener( 'click', function(event){
+    if(event.target.className === 'close__window') {
+      windowBlock.style.cssText += `
+        display: none
+      `;
+    }
+  })
+}
 
 class Flower {
   name;
   price;
   collection;
+  image;
   addInBasket = () => {
   };
 }
 
-
 for (let anchor of navLinks) {
   anchor.addEventListener('click', function (e) {
     e.preventDefault()
-    
     const blockID = anchor.getAttribute('href').substr(1)
-    
     document.getElementById(blockID).scrollIntoView({
       behavior: 'smooth',
       block: 'start'
@@ -292,6 +312,166 @@ const dropWindowOrder = ( event ) => {
   }
 }
 
+const addImageFlower = (flower) => {
+  switch (true) {
+      case flower.name === 'Весенний':
+        flower.image = imageArray[0][0]
+      break;
+      case flower.name === 'Нежный розовый':
+        flower.image = imageArray[0][1]
+      break;
+      case flower.name === 'Голубая луна':
+      flower.image = imageArray[0][2]
+      break;
+      case flower.name === 'Фиолетовый':
+      flower.image = imageArray[0][3]
+      break;
+      case flower.name === 'Голубой':
+      flower.image = imageArray[0][4]
+      break;
+      case flower.name === 'Красный':
+      flower.image = imageArray[0][5]
+      break;
+      case flower.name === 'Милый мой':
+      flower.image = imageArray[0][6]
+      break;
+      case flower.name === 'Светлый персик':
+      flower.image = imageArray[0][7]
+      break;
+      case flower.name === 'Белые листья':
+      flower.image = imageArray[0][8]
+      break;
+      case flower.name === 'Винный рог':
+      flower.image = imageArray[0][9]
+      break;
+      case flower.name === 'Лиловый кокос':
+      flower.image = imageArray[0][10]
+      break;
+      case flower.name === 'Бордовая сила':
+      flower.image = imageArray[0][11]
+      break;
+      case flower.name === 'Чистый':
+      flower.image = imageArray[0][12]
+      break;
+      case flower.name === 'Персик':
+      flower.image = imageArray[0][13]
+      break;
+      case flower.name === 'Синий':
+        flower.image = imageArray[1][0]
+      break;
+      case flower.name === 'Розовый яд':
+        flower.image = imageArray[1][1]
+      break;
+      case flower.name === 'Осенний':
+      flower.image = imageArray[1][2]
+      break;
+      case flower.name === 'Шоколад':
+      flower.image = imageArray[1][3]
+      break;
+      case flower.name === 'Шоколад Голд':
+      flower.image = imageArray[1][4]
+      break;
+      case flower.name === 'Вишня':
+      flower.image = imageArray[1][5]
+      break;
+      case flower.name === 'Молодой лес':
+      flower.image = imageArray[1][6]
+      break;
+      case flower.name === 'Черный хлеб':
+      flower.image = imageArray[1][7]
+      break;
+      case flower.name === 'Шелк':
+      flower.image = imageArray[1][8]
+      break;
+      case flower.name === 'Мис Мэри':
+      flower.image = imageArray[1][9]
+      break;
+      case flower.name === 'Класс А':
+      flower.image = imageArray[1][10]
+      break;
+      case flower.name === 'Школьный':
+      flower.image = imageArray[1][11]
+      break;
+      case flower.name === 'Горный':
+      flower.image = imageArray[1][12]
+      break;
+      case flower.name === 'Большой Лог':
+      flower.image = imageArray[1][13]
+      break;
+      case flower.name === 'Не шоколад':
+        flower.image = imageArray[2][0]
+      break;
+      case flower.name === 'Фиолетовый сад':
+        flower.image = imageArray[2][1]
+      break;
+      case flower.name === 'Розовая пастэль':
+      flower.image = imageArray[2][2]
+      break;
+      case flower.name === 'Фисташка':
+      flower.image = imageArray[2][3]
+      break;
+      case flower.name === 'Бирюза желтая':
+      flower.image = imageArray[2][4]
+      break;
+      case flower.name === 'Класс Б':
+      flower.image = imageArray[2][5]
+      break;
+      case flower.name === 'Космос':
+      flower.image = imageArray[2][6]
+      break;
+      case flower.name === 'Ягуана':
+      flower.image = imageArray[2][7]
+      break;
+      case flower.name === 'Лондон':
+      flower.image = imageArray[2][8]
+      break;
+      case flower.name === 'Москва':
+      flower.image = imageArray[2][9]
+      break;
+      case flower.name === 'Синица':
+      flower.image = imageArray[2][10]
+      break;
+      case flower.name === 'Дикая вишня':
+      flower.image = imageArray[3][0]
+      break;
+      case flower.name === 'AMG':
+      flower.image = imageArray[3][1]
+      break;
+      case flower.name === 'Дикая голубая луна':
+      flower.image = imageArray[3][2]
+      break;
+      case flower.name === 'Девственица':
+        flower.image = imageArray[3][3]
+      break;
+      case flower.name === 'Дикая красная луна':
+        flower.image = imageArray[3][4]
+      break;
+      case flower.name === 'Листья осени':
+      flower.image = imageArray[3][5]
+      break;
+      case flower.name === 'Азиатский пион':
+      flower.image = imageArray[3][6]
+      break;
+      case flower.name === 'Радужный поцелуй':
+      flower.image = imageArray[3][7]
+      break;
+      case flower.name === 'Каменоломня':
+      flower.image = imageArray[3][8]
+      break;
+      case flower.name === 'Милый мой':
+      flower.image = imageArray[2][6]
+      break;
+      case flower.name === 'Светлый персик':
+      flower.image = imageArray[2][7]
+      break;
+      case flower.name === 'Белые листья':
+      flower.image = imageArray[2][8]
+      break;
+    default:
+      break;
+  }
+}
+
 const dropEleganceList = ( event ) => {
   switch(true) {
     case event.target.classList[1] === 'collect__elegance--name' || event.target.className === 'elegance__name--title' || event.target.className === 'elegance__name--name':
@@ -299,11 +479,14 @@ const dropEleganceList = ( event ) => {
       nameFlowers[0].forEach( element => {
         let flower = new Flower();
         flower.name = element;
+        addImageFlower(flower)
         if(element === 'Весенний' || element === 'Красный') {flower.price = 1290} else flower.price = 1690;
+        console.log(flower)
         flower.collection = 'elegance';
         flowersArray.push(flower);
       });
-      console.log(flowersArray)
+      renderList();
+      closeWindow();
       break;
     default:
       break;
@@ -317,10 +500,13 @@ const dropColoristList = ( event ) => {
       nameFlowers[1].forEach( element => {
         let flower = new Flower();
         flower.name = element;
-        if(element === 'Розовый яд' || 'Молодой лес' || 'Мис Мэри') {flower.price = 1290} else flower.price = 1690;
+        addImageFlower(flower)
+        if(element === 'Розовый яд' || element === 'Молодой лес' || element === 'Мис Мэри') {flower.price = 1290} else flower.price = 1690;
         flower.collection = 'colorist';
         flowersArray.push(flower);
-      })
+      });
+      renderList();
+      closeWindow()
       break;
     default:
       break;
@@ -334,10 +520,13 @@ const dropNaturalList = ( event ) => {
       nameFlowers[2].forEach( element => {
         let flower = new Flower();
         flower.name = element;
-        if(element === 'Фисташка' || 'Космос' || 'Лондон') {flower.price = 1290} else flower.price = 1690;
+        addImageFlower(flower)
+        if(element === 'Фисташка' || element === 'Космос' || element === 'Лондон') {flower.price = 1290} else flower.price = 1690;
         flower.collection = 'natural';
         flowersArray.push(flower);
-      })
+      });
+      renderList();
+      closeWindow()
       break;
     default:
       break;
@@ -351,10 +540,14 @@ const dropLuxaryList = ( event ) => {
       nameFlowers[3].forEach( element => {
         let flower = new Flower();
         flower.name = element;
-        if(element === 'Розовый яд' || 'Молодой лес' || 'Мис Мэри') {flower.price = 1300Ё} else flower.price = 2990;
+        addImageFlower(flower)
+        if(element === 'Дикая вишня' || element === 'Радужный поцелуй' || element === 'Каменоломня') {flower.price = 1300};
+        flower.price = 2990;
         flower.collection = 'luxary';
         flowersArray.push(flower);
-      })
+      });
+      renderList();
+      closeWindow()
       break;
     default:
       break;
@@ -373,7 +566,51 @@ const clickOnWindow = ( event ) => {
 }
 
 const renderList = () => {
-
+  let listItem = '';
+  let imageItem = '';
+  flowersArray.forEach( element => {
+    if(element.collection === 'luxary') {
+      listItem += `
+      <li class="flowers__item">
+        <div class="flowers__item--image">
+          <img src="${element.image}" alt="" class="flowers__item--image--picture">
+        </div>
+        <div class="flowers__item--data--luxary">
+          <span class="flowers__item--data--price--luxary">${element.price}₽</span>
+          <p class="flowers__item--data--description">${element.name}</p>
+        </div>
+      </li>
+    `;  
+    } else {
+      listItem += `
+        <li class="flowers__item">
+          <div class="flowers__item--image">
+            <img src="${element.image}" alt="" class="flowers__item--image--picture">
+          </div>
+          <div class="flowers__item--data">
+            <span class="flowers__item--data--price">${element.price}₽</span>
+            <p class="flowers__item--data--description">${element.name}</p>
+          </div>
+        </li>
+      `;
+    }
+  });
+  newWindow = `
+    <div class="flowers">
+      <div class="close__window"></div>
+      <div class="flowers__container">
+        <h2 class="flowers__title">${flowersArray[0].collection}</h2>
+        <p class="flowers__description">Выберите букет и добавьте его в корзину</p>
+        <div class="flowers__content">
+          <ul class="flowers__content--list">
+            ${listItem}
+          </ul>
+        </div>
+      </div>
+    </div>
+  `;
+  windowBlock.style.cssText += `display: flex;`
+  windowBlock.innerHTML = newWindow
 }
 
 const listenWindow = windowBlock.addEventListener( 'click', clickOnWindow );
@@ -382,3 +619,4 @@ const listenElegance = eleganceList.addEventListener( 'click', dropEleganceList 
 const listenColorist = coloristList.addEventListener( 'click', dropColoristList );
 const listenNatural = naturalList.addEventListener( 'click', dropNaturalList );
 const listenLuxary = luxaryList.addEventListener( 'click', dropLuxaryList );
+
